@@ -1,32 +1,5 @@
--- Beohub Loader
--- Game: Heavyweight Fishing
+local url = "https://raw.githubusercontent.com/hayaccphuhhhs-droid/Bruh/refs/heads/main/Beohub367.txt"
 
-if game.PlaceId ~= 98502499119821 then
-    return game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "wrong game", 
-        Text = "For heavyweight fishing only.!", 
-        Duration = 3
-    })
-end
-
-local link = "https://raw.githubusercontent.com/hayaccphuhhhs-droid/Bruh/refs/heads/main/Beohub367.txt"
-
-task.spawn(function()
-    local ok, err = pcall(function()
-        local code = game:HttpGet(link)
-        if code and code ~= "" then
-            loadstring(code)()
-        else
-            error("Link die hoac file rong!")
-        end
-    end)
-    
-    if not ok then
-        warn("[Beohub] Loi roi: " .. tostring(err))
-        game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = "Error", 
-            Text = "NotThing", 
-            Duration = 5
-        })
-    end
+pcall(function()
+    loadstring(game:HttpGet(url))()
 end)
