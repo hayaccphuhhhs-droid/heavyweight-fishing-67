@@ -1,5 +1,12 @@
-local url = "https://raw.githubusercontent.com/hayaccphuhhhs-droid/Bruh/refs/heads/main/Beohub367.txt"
+local HW_ID = 126884695634066
 
-pcall(function()
-    loadstring(game:HttpGet(url))()
-end)
+if game.PlaceId ~= HW_ID then
+    pcall(function()
+        sg:SetCore("SendNotification", {
+            Title = "BeoHub",
+            Text = "No Support",
+            Duration = 5
+        })
+    end)
+    return
+end
