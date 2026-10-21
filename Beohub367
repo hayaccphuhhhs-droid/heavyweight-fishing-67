@@ -1,13 +1,1 @@
-local PLACE_ID = 98502499119821 -- Heavyweight Fishing
-
-if game.PlaceId ~= PLACE_ID then
-    pcall(function()
-        game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = "BeoHub",
-            Text = "No support",
-            Duration = 5
-        })
-    end)
-    warn("[BeoHub] No support — wrong game. PlaceId:", game.PlaceId)
-    return
-end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hayaccphuhhhs-droid/Bruh/refs/heads/main/Beohub367.txt"))()
